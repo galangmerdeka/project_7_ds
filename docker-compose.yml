@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  api:
+    build: .
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./api/v1/classifier/:/app/api/v1/classifier/
+      - ./api/v2/classifier/:/app/api/v2/classifier/
